@@ -33,13 +33,7 @@ from=${args[0]}
 to=${args[1]}
 
 # Skip headers
-while read line
-do
-	if [[ -z "$line" ]]
-	then
-		break
-	fi
-done
+sed -un '/^$/q'
 
 # Get the email body, skipping quoted reply stuff
 msg=$(sed '/^On .*,.*:.*:\| wrote:$\|^>/d')
