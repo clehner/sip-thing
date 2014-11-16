@@ -57,6 +57,10 @@ class PhoneNumber
 			return $this->number;
 		}
 	}
+
+	function just_number() {
+		return preg_replace('/[^0-9]/', '', $this->number);
+	}
 }
 
 class Request
