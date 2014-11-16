@@ -58,6 +58,16 @@ Basic approach:
 I'm not completely sure why I had to add the command to the alias map instead of
 just using the transport map. If you find a simpler config method, let me know.
 
+## Costs
+
+Service       | Twilio        | CallWithUs
+------------- | -------------:| -------------:
+DID           | $1/month      | - (no longer offered)
+Incoming call | $0.0075/min   | -
+Outgoing call | $0.015/min    | $0.0095/min
+Incoming text | $0.0075       | -
+Outgoing text | $0.0225       | $0.05
+
 ## Todo
 
 - Record and transcribe voicemail
