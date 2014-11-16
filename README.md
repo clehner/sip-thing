@@ -7,8 +7,8 @@ Services used:
 - [CallWithUs](https://www.callwithus.com/): outgoing calls and texts
 
 Basic approach:
-- SMS &darr; email
-- Voice &darr; SIP
+- SMS &harr; email
+- Voice &harr; SIP
 
 ## Features
 
