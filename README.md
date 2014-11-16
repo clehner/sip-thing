@@ -31,8 +31,7 @@ Basic approach:
 ### Outgoing text messages via email
 
 - Copy `cwu/config.example.sh` to `cwu/config.sh`.
-  Replace the API key and From number with your information, from your Account
-  Info page.
+  Replace the API key with yours, from your Account Info page.
 
 - In `/etc/postfix/main.cf`, add `alias_maps = pcre:/etc/postfix/aliases`.
 
