@@ -2,8 +2,7 @@
 ini_set('display_errors', 0);
 include 'config.php';
 include 'functions.php';
-
-if (!isset($_POST['MessageUUID'])) exit;
+validate_response();
 
 $from = $_POST['From'];
 $to = $_POST['To'];
