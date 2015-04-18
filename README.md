@@ -59,13 +59,13 @@ just using the transport map. If you find a simpler config method, let me know.
 
 ## Costs
 
-Service       | Twilio        | CallWithUs
-------------- | -------------:| -------------:
-DID           | $1/month      | - (no longer offered)
-Incoming call | $0.0075/min   | -
-Outgoing call | $0.015/min    | $0.0095/min
-Incoming text | $0.0075       | -
-Outgoing text | $0.0225       | $0.05
+Service       | Twilio        | CallWithUs        | Plivo
+------------- | -------------:| -----------------:|-----------:
+DID           | $1/month      | $2.74-$3.49/month | $0.80/month
+Incoming call | $0.0075/min   | -                 | $0.0085/min
+Outgoing call | $0.015/min    | $0.0095/min       | $0.009/min
+Incoming text | $0.0075       | -                 | free
+Outgoing text | $0.0075       | $0.05             | $0.0035
 
 ## Todo
 
