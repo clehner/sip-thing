@@ -18,3 +18,11 @@ function validate_response() {
 		die('invalid signature');
 	}
 }
+
+function mail_headers($obj) {
+	$headers = array();
+	foreach ($obj as $key => $value) {
+		$headers[] = "$key: $value";
+	}
+	return implode("\r\n", $headers);
+}
