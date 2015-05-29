@@ -26,3 +26,11 @@ function mail_headers($obj) {
 	}
 	return implode("\r\n", $headers);
 }
+
+function duration_format($ms) {
+	$s = $ms/1000;
+	if ($s < 60) return $s.'s';
+	$m = (int)($s / 60);
+	$s %= 60;
+	return $m.'m'.$s.'s';
+}
