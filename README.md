@@ -1,15 +1,19 @@
 # sip thing
 
-This is a thing to assist with sending text messages and phone calls from your computer. It is intended sortof as a Google Voice replacement.
+This is a thing to assist with using text messages and phone calls from your
+computer. It is intended sortof as a Google Voice replacement. It doesn't store
+messages anywhere but routes them through email.
 
 You can pick some combination of these services to use:
 - [Twilio](https://www.twilio.com/): incoming calls and texts
 - [CallWithUs](https://www.callwithus.com/): outgoing calls and texts
 - [Plivo](https://www.callwithus.com/): outgoing calls; incoming and outgoing texts
 
-Basic approach:
+## Basic outline
+
 - SMS &harr; email
 - Voice &harr; SIP
+- Voicemail &rarr; email
 
 ## Features
 
