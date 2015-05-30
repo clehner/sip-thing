@@ -117,6 +117,7 @@ SIP calls.
 - Twilio: delete resources after sent/received
 - Twilio, Plivo: Consider making and sending voicemail transcriptions
 - Make it a web app (just kidding)
+- Make email messages thread properly
 
 [twl]: http://www.twilio.com/voice/pricing#extras
 [plv]: https://www.plivo.com/pricing/
