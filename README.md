@@ -55,7 +55,7 @@ features. Plivo is cheaper and open source.
 ### Outgoing text messages via email
 
 This section sets up your mail server so that you can send mail to addresses
-like `theirnumber.yournumber.sms@yourhost.example.com` and have them be
+like `yournumber.theirnumber.sms@yourhost.example.com` and have them be
 delivered as text messages.
 
 To use CallWithUs instead of Plivo for outgoing texts, follow these steps using
@@ -66,7 +66,7 @@ To use CallWithUs instead of Plivo for outgoing texts, follow these steps using
 
 - In `/etc/postfix/main.cf`, add `alias_maps = pcre:/etc/postfix/aliases`.
 
-- In `/etc/postfix/aliases`, add `/^(.*\.sms)@/ |/path/to/this/repo/plivo/send-text.sh $1`.
+- In `/etc/postfix/aliases`, add `/\.sms@/ root`
 
 - Run `postmap /etc/postfix/aliases`
 
@@ -75,9 +75,6 @@ To use CallWithUs instead of Plivo for outgoing texts, follow these steps using
 
 - In `/etc/postfix/recipient_access`, add a line `/.sms@/ REJECT`. This is to
   prevent unauthorized people from using your server's sms service.
-
-- In `/etc/postfix/main.cf`, add `mailbox_transport_maps =
-  pcre:/etc/postfix/transports`. Remove `mailbox_transport` if you have it.
 
 - In `/etc/postfix/transports`, add two lines. First `/sms/ sms`. Then `/./ `
   followed by what you had in `mailbox_transport` previously. e.g. if you are
@@ -91,10 +88,6 @@ sms  unix  -       n       n       -       -       pipe
 This defines the `sms` transport used the previous step.
 
 - Run `postfix reload`
-
-I'm not completely sure why I had to add the command to the alias map instead
-of just using the transport map. If you find a simpler config method, let me
-know.
 
 ## Provider cost comparison
 
