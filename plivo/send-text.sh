@@ -2,7 +2,7 @@
 . $(dirname $0)/config.sh
 
 send_sms() {
-	local text=$(sed 's/[\\"]/\\&/g' <<<"$3")
+	local text=$(sed 's/[\\"]/\\&/g')
 	curl -s "https://api.plivo.com/v1/Account/$plivo_auth_id/Message/"\
 		-d "{\"src\":\"$1\",\"dst\":\"$2\",\"text\":\"$text\"}"\
 		-H 'Content-type: application/json'\
@@ -25,6 +25,5 @@ to=${args[1]}
 sed -un '/^$/q'
 
 # Get the email body, skipping quoted reply stuff
-msg=$(sed '/^On .*,.*:.*:\| wrote:$\|^>/d')
-
-send_sms $from $to "$msg"
+sed '/^On .*,.*:.*:\| wrote:$\|^>/d' |\
+	send_sms $from $to
